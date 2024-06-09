@@ -21,13 +21,19 @@ const links = {
 };
 ---
 
-<footer>
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-    <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
-    <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-        2024 - Fernando Hernández Loeza.
-      </span>
+<nav
+  class="fixed w-full z-50 top-0 start-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+>
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 px-4"
+  >
+    <a href="/" class="flex items-center p-2 text-sm">
+      <div>
+        <span class="text-lg font-bold">fhelo.tech</span>
+      </div>
+    </a>
+
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <div class="flex mt-4 sm:justify-center sm:mt-0">
         {
           Object.entries(links).map(([key, { iconElement: Icon, href }]) => (
@@ -44,4 +50,4 @@ const links = {
       </div>
     </div>
   </div>
-</footer>
+</nav>

@@ -2,6 +2,7 @@
 interface Props {
 	title: string;
 }
+import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
 const { title } = Astro.props;
@@ -28,6 +29,7 @@ const description = "Fernando's Portfolio";
 	</head>
 
 	<body class="h-screen w-screen">
+		<Navbar />
 		<div class="fixed w-full h-full -z-10">
 			<div class="relative min-h-full min-w-full bg-black">
 				<div
