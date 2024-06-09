@@ -2,26 +2,50 @@
 interface Props {
 	title: string;
 }
+import Footer from "../components/Footer.astro";
 
 const { title } = Astro.props;
+const description = "Fernando's Portfolio";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/webp" href="/favicon.webp" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<!-- <meta property="twitter:image" content={ogImageURL} /> -->
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="fhelo.tech" />
+		<meta itemprop="description" content="Fernando's Portfolio" />
+		<meta
+			itemprop="image"
+			content="https://fbmmvpabekeosgejegtz.supabase.co/storage/v1/object/public/images/meta.webp?t=2024-04-04T21%3A11%3A07.155Z"
+		/>
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+
+	<body class="h-screen w-screen">
+		<div class="fixed w-full h-full -z-10">
+			<div class="relative min-h-full min-w-full bg-black">
+				<div
+					class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_14px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+				>
+				</div>
+			</div>
+		</div>
+
+		<div class="p16 lg:p-32 flex flex-col items-center z-10 p-8">
+			<slot />
+		</div>
+
+		<Footer />
 	</body>
 </html>
 <style is:global>
-	:root {
+	/* :root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
@@ -31,21 +55,31 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+	} */
+
+	:root {
+		--primary: rgb(245, 101, 101);
+		--secondary: rgb(43, 108, 176);
+		--tertiary: rgb(45, 55, 72);
+		--quaternary: rgb(237, 242, 247);
+		--accent-gradient: linear-gradient(
+			45deg,
+			var(--primary),
+			var(--secondary) 30%,
+			white 60%
+		);
+		background-color: black;
+		color: #aaa;
+		/* --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--primary)),
+      rgb(var(--secondary)) 30%,
+      white 60%
+    ); */
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	* {
+		box-sizing: border-box;
+		min-width: 0;
 	}
 </style>
