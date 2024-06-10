@@ -27,7 +27,7 @@ const filteredTechnologies = availableTechnologies.filter((tech) =>
         <ul class="text-sm flex gap-4 m-2 bg-white/20 w-fit p-2 rounded">
           {
             filteredTechnologies.map(({ src, alt }) => (
-              <TechnologyIcon src={src} alt={alt} size={8} client:load />
+              <TechnologyIcon src={src} alt={alt} size={5} client:load />
             ))
           }
         </ul>
