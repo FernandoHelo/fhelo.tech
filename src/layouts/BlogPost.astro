@@ -9,11 +9,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <Layout title={title}>
 	<Section title={title}>
 		<article slot="content">
-			<!-- <div class="hero-image">
-        {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-      </div> -->
-			<div class="title">
-				<div class="date">
+			<div>
+				<div>
 					<p>
 						date={pubDate}
 					</p>
@@ -26,48 +23,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<h1>{title}</h1>
 					<hr />
 				</div>
-				<slot />
+				<div class="max-w-[90vw] lg:max-w-full flex justify-center">
+					<slot />
+				</div>
 			</div>
 		</article>
 	</Section>
 </Layout>
-
-<style>
-	main {
-		width: calc(100% - 2em);
-		max-width: 100%;
-		margin: 0;
-	}
-	.hero-image {
-		width: 100%;
-	}
-	.hero-image img {
-		display: block;
-		margin: 0 auto;
-		border-radius: 12px;
-		box-shadow: var(--box-shadow);
-	}
-	.prose {
-		width: 720px;
-		max-width: calc(100% - 2em);
-		margin: auto;
-		padding: 1em;
-		color: rgb(var(--gray-dark));
-	}
-	.title {
-		margin-bottom: 1em;
-		padding: 1em 0;
-		text-align: center;
-		line-height: 1;
-	}
-	.title h1 {
-		margin: 0 0 0.5em 0;
-	}
-	.date {
-		margin-bottom: 0.5em;
-		color: rgb(var(--gray));
-	}
-	.last-updated-on {
-		font-style: italic;
-	}
-</style>
