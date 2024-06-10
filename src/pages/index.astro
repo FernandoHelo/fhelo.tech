@@ -2,10 +2,24 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 
-import CardSpotlight from "../components/CardSpotlight.tsx";
+import ProjectList from "../components/ProjectList.tsx";
 import Timeline from "../components/Timeline.astro";
 
 const title = "fhelo.tech";
+
+const projects = [
+	{
+		title: "Project One",
+		description: "This is a description for project one.",
+		technologies: ["react", "astro"],
+	},
+	{
+		title: "Project Two",
+		description: "This is a description for project two.",
+		technologies: ["supabase", "vite"],
+	},
+	// Add more projects here...
+];
 ---
 
 <Layout title={title}>
@@ -26,15 +40,8 @@ const title = "fhelo.tech";
 	</Section>
 
 	<Section title="Projects">
-		<div slot="content" class="flex gap-2 flex-wrap justify-center">
-			<CardSpotlight client:load />
-			<CardSpotlight client:load />
-			<CardSpotlight client:load />
-			<CardSpotlight client:load />
-			<CardSpotlight client:load />
-			<CardSpotlight client:load />
-			<CardSpotlight client:load />
-			<CardSpotlight client:load />
+		<div slot="content">
+			<ProjectList client:load />
 		</div>
 	</Section>
 
