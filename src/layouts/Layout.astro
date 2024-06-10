@@ -28,7 +28,7 @@ const description = "Fernando's Portfolio";
 		<title>{title}</title>
 	</head>
 
-	<body class="h-screen w-screen">
+	<body class="h-screen w-screen flex flex-col justify-between">
 		<Navbar />
 		<div class="fixed w-full h-full -z-10">
 			<div class="relative min-h-full min-w-full bg-black">
@@ -47,37 +47,21 @@ const description = "Fernando's Portfolio";
 	</body>
 </html>
 <style is:global>
-	/* :root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	} */
-
 	:root {
-		--primary: rgb(245, 101, 101);
-		--secondary: rgb(43, 108, 176);
+		--primary: rgb(63, 74, 224);
+		--primary2: rgb(45, 97, 188);
+		--primary3: rgb(39, 48, 224);
+		--secondary: rgb(33, 23, 38);
 		--tertiary: rgb(45, 55, 72);
 		--quaternary: rgb(237, 242, 247);
 		--accent-gradient: linear-gradient(
-			45deg,
+			30deg,
 			var(--primary),
-			var(--secondary) 30%,
-			white 60%
+			var(--secondary) 50%,
+			var(--primary3) 60%
 		);
 		background-color: black;
-		color: #aaa;
-		/* --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--primary)),
-      rgb(var(--secondary)) 30%,
-      white 60%
-    ); */
+		color: #bbb;
 	}
 
 	* {
