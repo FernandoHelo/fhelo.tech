@@ -1,0 +1,38 @@
+---
+import { projects, availableTechnologies } from "../../utils/constants.ts";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({ params: { project: project.slug } }));
+}
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/Section.astro";
+import TechnologyIcon from "../../components/TechnologyIcon.tsx";
+
+const { project } = Astro.params;
+
+const filteredProject = projects.find((p) => p.slug === project);
+
+const filteredTechnologies = availableTechnologies.filter((tech) =>
+  filteredProject?.technologies.includes(tech.alt.toLowerCase()),
+);
+---
+
+<Layout title={project}>
+  <Section title={filteredProject?.title}>
+    <div slot="content">
+      <p>{filteredProject?.description}</p>
+      <div class="my-10">
+        <h3 class="text-xl font-bold">Stack</h3>
+        {/* Technologies */}
+        <ul class="text-sm flex gap-4 m-2 bg-white/20 w-fit p-2 rounded">
+          {
+            filteredTechnologies.map(({ src, alt }) => (
+              <TechnologyIcon src={src} alt={alt} size={8} client:load />
+            ))
+          }
+        </ul>
+      </div>
+      <img src="/projects/project1/image1.png" alt="" />
+    </div>
+  </Section>
+</Layout>
