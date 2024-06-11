@@ -1,7 +1,7 @@
 ---
 title: 'Red de Ciudades Inteligentes'
 description: 'Lorem ipsum dolor sit amet'
-technologies: ['php', 'bootstrap', 'mariadb', 'node.js', 'python', 'esp32', 'mqtt']
+technologies: ['astro', 'react', 'tailwindcss', 'node.js']
 date: 'Jul 02 2022'
 heroImage: '/blog-placeholder-5.jpg'
 ---

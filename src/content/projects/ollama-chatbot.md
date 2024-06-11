@@ -1,7 +1,7 @@
 ---
-title: 'Llamma 3 Chat-bot'
+title: 'Llamma3 Local Chatbot'
 description: 'Lorem ipsum dolor sit amet'
-technologies: ['php', 'bootstrap', 'mariadb', 'node.js', 'python', 'esp32', 'mqtt']
+technologies: ['react', 'tailwindcss', 'node.js', 'ollama']
 date: 'Jul 02 2022'
 heroImage: '/blog-placeholder-5.jpg'
 ---

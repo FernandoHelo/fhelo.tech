@@ -1,7 +1,7 @@
 ---
 title: 'Xhalata'
 description: 'Lorem ipsum dolor sit amet'
-technologies: ['astro', 'preact', 'three.js', 'supabase', 'mapbox']
+technologies: ['astro', 'preact', 'three.js', 'supabase', 'mapbox', 'tailwindcss']
 date: 'Jul 02 2022'
 heroImage: '/public/projects/xhalata/hero.webp'
 ---

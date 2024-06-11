@@ -1,7 +1,7 @@
 ---
 title: 'Python Image Transformations'
 description: 'Lorem ipsum dolor sit amet'
-technologies: ['php', 'bootstrap', 'mariadb', 'node.js', 'python', 'esp32', 'mqtt']
+technologies: ['python', 'streamlit', 'opencv']
 date: 'Jul 02 2022'
 heroImage: '/blog-placeholder-5.jpg'
 ---

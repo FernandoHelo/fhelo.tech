@@ -1,7 +1,7 @@
 ---
 title: 'Dockyhub'
 description: 'Lorem ipsum dolor sit amet'
-technologies: ['php', 'bootstrap', 'mariadb', 'node.js', 'python', 'esp32', 'mqtt']
+technologies: ['next.js', 'tailwindcss', 'openai', 'supabase', 'pinecone']
 date: 'Jul 02 2022'
 heroImage: '/blog-placeholder-5.jpg'
 ---

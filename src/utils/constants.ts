@@ -9,19 +9,19 @@ export const projects = [
     slug: '3d-tour',
     title: '3D and AR Interactive Tour',
     description: "This project was developed for a real estate company. It is a 3D and AR interactive tour that allows the user to explore the property in 3D and AR. The project was built using Three.js and Vite. The 3D models were created with Blender and the AR was built with Google's model-viewer.",
-    technologies: ['vite', 'three.js', 'blender'],
+    technologies: ['vite', 'three.js', 'blender', 'tailwindcss'],
   },
   {
     slug: 'xhalata',
     title: 'Xhalata',
     description: 'Xhalata is a landing page for a real state developer company. It was built to show the users the kind of appartmens that they offer in a new development at Punta de Mita, Nayarit. The project was built using Astro for performance and Supabase to store the models and manage suer subscriptions.',
-    technologies: ['astro', 'preact', 'three.js', 'supabase', 'mapbox'],
+    technologies: ['astro', 'preact', 'three.js', 'supabase', 'mapbox', 'tailwindcss'],
   },
   {
     slug: 'my-om',
     title: 'My OM Assistant',
     description: 'My OM Assistant is a voice assistant that helps you monitor and understand the state of buildings. It is paired with a Digital Twin that allows you to see the building in 3D and AR.',
-    technologies: ['python', 'openai', 'mqtt', 'three.js'],
+    technologies: ['python', 'openai', 'three.js', 'langchain', 'homeassistant'],
   }
 ];
 
@@ -46,4 +46,11 @@ export const availableTechnologies = [
   { src: 'https://svgl.app/library/openai_dark.svg', alt: 'OpenAI'},
   { src: '/technologies/mapbox.png', alt: 'Mapbox'},
   { src: 'https://svgl.app/library/linux.svg', alt: 'Linux'},
+  { src: 'https://svgl.app/library/tailwindcss.svg', alt: 'TailwindCSS'},
+  { src: '/technologies/langchain.png', alt: 'Langchain'},
+  { src: '/technologies/hass.png', alt: 'HomeAssistant'},
+  { src: '/technologies/opencv.png', alt: 'OpenCV'},
+  { src: '/technologies/streamlit.png', alt: 'Streamlit'},
+  { src: '/technologies/pinecone.png', alt: 'Pinecone'},
+  { src: 'https://svgl.app/library/ollama_dark.svg', alt: 'Ollama'},
 ];

@@ -1,7 +1,7 @@
 ---
 title: '3D Cloud Points'
 description: 'Lorem ipsum dolor sit amet'
-technologies: ['php', 'bootstrap', 'mariadb', 'node.js', 'python', 'esp32', 'mqtt']
+technologies: ['astro', 'tailwindcss', 'blender', 'three.js']
 date: 'Jul 02 2022'
 heroImage: '/blog-placeholder-5.jpg'
 ---
