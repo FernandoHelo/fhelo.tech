@@ -1,8 +1,29 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import ProjectList from "../../components/ProjectList.tsx";
+
+import { getCollection } from "astro:content";
+import CardSpotlight from "../../components/CardSpotlight.tsx";
+
+const projects = await getCollection("projects");
 ---
 
 <Layout title="Projects">
-  <ProjectList client:load />
+  <ul class="space-y-4">
+    {
+      projects.map((project, index) => (
+        <li>
+          <CardSpotlight
+            variant="list"
+            slug={project.slug}
+            title={project.data.title}
+            description={project.data.description}
+            technologies={project.data.technologies}
+            client:load
+          />
+        </li>
+      ))
+    }
+  </ul>
+  <!-- <ProjectList client:load /> -->
 </Layout>

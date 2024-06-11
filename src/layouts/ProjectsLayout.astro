@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Layout from "./Layout.astro";
+import Section from "../components/Section.astro";
+type Props = CollectionEntry<"projects">["data"];
+const { title, description, heroImage, technologies } = Astro.props;
+import { availableTechnologies } from "../utils/constants.ts";
+import TechnologyIcon from "../components/TechnologyIcon";
+
+const filteredTechnologies = availableTechnologies.filter((tech) =>
+  technologies.includes(tech.alt.toLowerCase()),
+);
+---
+
+<Layout title={title}>
+  <Section>
+    <article slot="content" class="-mt-16 lg:-mt-10">
+      <div class="max-w-[90vw] lg:max-w-full">
+        <img src={heroImage} alt={title} class="w-full h-auto rounded-xl" />
+      </div>
+      <div class="mt-4">
+        <h1 class="text-3xl font-bold text-gray-200">{title}</h1>
+        <hr />
+        {/* Technologies */}
+        <ul class="text-md flex gap-2 my-3 mt-5 whitespace-pre flex-wrap">
+          {
+            filteredTechnologies.map(({ src, alt }) => (
+              <span class="flex shrink-0 items-center gap-1 bg-gray-900 p-1 px-2 rounded text-gray-500">
+                {alt}
+                <TechnologyIcon src={src} alt={alt} size={5} />
+              </span>
+            ))
+          }
+        </ul>
+        <hr />
+        <div class="max-w-[90vw] lg:max-w-full flex justify-center">
+          <slot />
+        </div>
+      </div>
+    </article>
+  </Section>
+</Layout>
