@@ -12,10 +12,10 @@ export const projects = [
     technologies: ['vite', 'three.js', 'blender', 'tailwindcss'],
   },
   {
-    slug: 'xhalata',
-    title: 'Xhalata',
-    description: 'Xhalata is a landing page for a real state developer company. It was built to show the users the kind of appartmens that they offer in a new development at Punta de Mita, Nayarit. The project was built using Astro for performance and Supabase to store the models and manage suer subscriptions.',
-    technologies: ['astro', 'preact', 'three.js', 'supabase', 'mapbox', 'tailwindcss'],
+    slug: 'dockyhub',
+    title: 'Dockyhub',
+    description: 'Dockyhub is an platform designed specifically for university professors to share class documents seamlessly. This platform provides an efficient way for educators to upload, organize, and distribute educational materials, ensuring that students have easy access to all necessary resources.',
+    technologies: ['next.js', 'tailwindcss', 'openai', 'supabase', 'pinecone'],
   },
   {
     slug: 'my-om',
