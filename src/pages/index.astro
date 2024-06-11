@@ -23,23 +23,29 @@ const projects = [
 ---
 
 <Layout title={title}>
-	<h1>
-		<span class="text-gradient text-4xl font-bold">
+	<h1 class="lg:mt-16">
+		<span
+			class="text-4xl font-bold bg-gradient-to-t from-[#969fc5] to-[var(--primary)] bg-clip-text text-transparent"
+		>
 			Fernando Hernández Loeza
 		</span>
 	</h1>
 
-	<h2 class="text-3xl font-bold w-full sm:text-center">Full Stack Developer</h2>
+	<h2 class="text-3xl font-bold w-full sm:text-center mb-8">
+		Full Stack Developer
+	</h2>
 
 	<Section title="About me">
-		<p slot="content">
-			I'm a Full Stack Developer with a passion for creating web applications
-			that are fast, responsive, and user-friendly. I have experience working
-			with JavaScript, TypeScript, React, Node.js, and other technologies.
+		<p slot="content" class="text-gray-400">
+			A driven and adaptable Full Stack Developer with a strong foundation in
+			mechatronics engineering. Transitioned from a maintenance engineer to a
+			developer to leverage my problem-solving skills and technical expertise in
+			creating innovative software and IoT solutions. Eager to contribute to a
+			team that values continuous improvement and cutting-edge technology.
 		</p>
 	</Section>
 
-	<Section title="Projects">
+	<Section title="Projects" link="projects">
 		<div slot="content">
 			<ProjectList client:load />
 		</div>
@@ -51,13 +57,3 @@ const projects = [
 		</div>
 	</Section>
 </Layout>
-
-<style>
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-</style>

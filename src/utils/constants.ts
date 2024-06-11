@@ -6,39 +6,27 @@ export const projects = [
     technologies: ['php', 'bootstrap', 'mariadb', 'node.js', 'python', 'esp32', 'mqtt'],
   },
   {
-    slug: 'project2',
-    title: 'Project Two',
-    description: 'This is a description for project two.',
-    technologies: ['supabase', 'vite'],
+    slug: '3d-tour',
+    title: '3D and AR Interactive Tour',
+    description: "This project was developed for a real estate company. It is a 3D and AR interactive tour that allows the user to explore the property in 3D and AR. The project was built using Three.js and Vite. The 3D models were created with Blender and the AR was built with Google's model-viewer.",
+    technologies: ['vite', 'three.js', 'blender'],
   },
   {
-    slug: 'project3',
-    title: 'Project Three',
-    description: 'This is a description for project three.',
-    technologies: ['mysql', 'mongodb', 'postgresql'],
+    slug: 'xhalata',
+    title: 'Xhalata',
+    description: 'Xhalata is a landing page for a real state developer company. It was built to show the users the kind of appartmens that they offer in a new development at Punta de Mita, Nayarit. The project was built using Astro for performance and Supabase to store the models and manage suer subscriptions.',
+    technologies: ['astro', 'preact', 'three.js', 'supabase', 'mapbox'],
   },
   {
-    slug: 'project4',
-    title: 'Project Four',
-    description: 'This is a description for project four.',
-    technologies: ['next.js'],
-  },
-  {
-    slug: 'project5',
-    title: 'Project Five',
-    description: 'This is a description for project five.',
-    technologies: ['react', 'supabase', 'vite'],
-  },
-  {
-    slug: 'project6',
-    title: 'Project Six',
-    description: 'This is a description for project six.',
-    technologies: ['mysql', 'mongodb', 'postgresql'],
+    slug: 'my-om',
+    title: 'My OM Assistant',
+    description: 'My OM Assistant is a voice assistant that helps you monitor and understand the state of buildings. It is paired with a Digital Twin that allows you to see the building in 3D and AR.',
+    technologies: ['python', 'openai', 'mqtt', 'three.js'],
   }
 ];
 
 export const availableTechnologies = [
-  { src: 'https://svgl.app/library/astro.svg', alt: 'Astro' },
+  { src: 'https://svgl.app/library/astro_dark.svg', alt: 'Astro' },
   { src: 'https://svgl.app/library/react.svg', alt: 'React' },
   { src: 'https://svgl.app/library/supabase.svg', alt: 'Supabase' },
   { src: 'https://svgl.app/library/vitejs.svg', alt: 'Vite' },
@@ -52,4 +40,10 @@ export const availableTechnologies = [
   { src: 'https://svgl.app/library/python.svg', alt: 'Python'},
   { src: 'https://www.tshirtgeek.com.br/wp-content/uploads/2021/09/ELE013.jpg', alt: 'ESP32'},
   { src: 'https://mqtt.org/assets/downloads/mqtt-ver.png', alt: 'MQTT'},
+  { src: 'https://svgl.app/library/threejs-dark.svg', alt: 'Three.js'},
+  { src: 'https://svgl.app/library/blender.svg', alt: 'Blender'},
+  { src: 'https://svgl.app/library/preact.svg', alt: 'Preact'},
+  { src: 'https://svgl.app/library/openai_dark.svg', alt: 'OpenAI'},
+  { src: '/technologies/mapbox.png', alt: 'Mapbox'},
+  { src: 'https://svgl.app/library/linux.svg', alt: 'Linux'},
 ];
