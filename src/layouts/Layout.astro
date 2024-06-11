@@ -12,12 +12,14 @@ const description = "Fernando's Portfolio";
 <!doctype html>
 <html lang="en">
 	<head>
+		<title>{title}</title>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/webp" href="/favicon.webp" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<!-- <meta property="twitter:image" content={ogImageURL} /> -->
+
 		<!-- Google / Search Engine Tags -->
 		<meta itemprop="name" content="fhelo.tech" />
 		<meta itemprop="description" content="Fernando's Portfolio" />
@@ -25,7 +27,25 @@ const description = "Fernando's Portfolio";
 			itemprop="image"
 			content="https://fbmmvpabekeosgejegtz.supabase.co/storage/v1/object/public/images/meta.webp?t=2024-04-04T21%3A11%3A07.155Z"
 		/>
-		<title>{title}</title>
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://fhelo.tech" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="fhelo.tech" />
+		<meta property="og:description" content="Fernando's Portfolio" />
+		<meta
+			property="og:image"
+			content="https://fbmmvpabekeosgejegtz.supabase.co/storage/v1/object/public/images/meta.webp?t=2024-04-04T21%3A11%3A07.155Z"
+		/>
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="fhelo.tech" />
+		<meta name="twitter:description" content="Fernando's Portfolio" />
+		<meta
+			name="twitter:image"
+			content="https://fbmmvpabekeosgejegtz.supabase.co/storage/v1/object/public/images/meta.webp?t=2024-04-04T21%3A11%3A07.155Z"
+		/>
 	</head>
 
 	<body class="h-screen w-screen flex flex-col justify-between">
