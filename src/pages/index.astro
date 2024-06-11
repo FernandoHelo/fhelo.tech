@@ -6,20 +6,6 @@ import ProjectList from "../components/ProjectList.tsx";
 import Timeline from "../components/Timeline.astro";
 
 const title = "fhelo.tech";
-
-const projects = [
-	{
-		title: "Project One",
-		description: "This is a description for project one.",
-		technologies: ["react", "astro"],
-	},
-	{
-		title: "Project Two",
-		description: "This is a description for project two.",
-		technologies: ["supabase", "vite"],
-	},
-	// Add more projects here...
-];
 ---
 
 <Layout title={title}>
@@ -31,21 +17,29 @@ const projects = [
 		</span>
 	</h1>
 
-	<h2 class="text-3xl font-bold w-full sm:text-center mb-8">
+	<h2 class="text-3xl font-bold w-full sm:text-center mb-0 text-balance">
 		Full Stack Developer
 	</h2>
 
-	<Section title="About me">
+	<Section>
 		<p slot="content" class="text-gray-400">
-			A driven and adaptable Full Stack Developer with a strong foundation in
-			mechatronics engineering. Transitioned from a maintenance engineer to a
-			developer to leverage my problem-solving skills and technical expertise in
-			creating innovative software and IoT solutions. Eager to contribute to a
-			team that values continuous improvement and cutting-edge technology.
+			A driven and adaptable Full Stack Developer with
+			<span class="font-bold text-gray-300"> 2 years </span> of experience and a
+			strong foundation in mechatronics engineering. Transitioned from a maintenance
+			engineer to a developer to leverage my problem-solving skills and technical
+			expertise to create innovative software and IoT solutions.
 		</p>
 	</Section>
 
-	<Section title="Projects" link="projects">
+	<a
+		href="/fhl-resume.pdf"
+		download
+		class="inline-flex h-12 animate-background-shine items-center justify-center rounded-md border border-gray-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-400"
+	>
+		Download resume
+	</a>
+
+	<Section title="Projects">
 		<div slot="content">
 			<ProjectList client:load />
 		</div>
