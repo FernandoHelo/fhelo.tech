@@ -4,6 +4,7 @@ interface Props {
 }
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 const { title } = Astro.props;
 const description = "Fernando's Portfolio";
@@ -68,7 +69,7 @@ const description = "Fernando's Portfolio";
 		<div class="lg:p-16 flex flex-col items-center z-10 p-8">
 			<slot />
 		</div>
-
+		<SpeedInsights />
 		<Footer />
 	</body>
 </html>
