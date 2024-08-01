@@ -1,22 +1,24 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection, getEntryBySlug } from "astro:content";
 import ProjectsLayout from "../../layouts/ProjectsLayout.astro";
 import Prose from "../../components/Prose.astro";
 
-export async function getStaticPaths() {
-  const projects = await getCollection("projects");
-  return projects.map((project) => ({
-    params: { slug: project.slug },
-    props: project,
-  }));
+const { slug } = Astro.params;
+
+if (!slug) {
+  throw new Error("Slug is required");
 }
 
-type Props = CollectionEntry<"projects">;
-const proj = Astro.props;
-const { Content } = await proj.render();
+const entry = await getEntryBySlug("projects", slug);
+
+if (!entry) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await entry.render();
 ---
 
-<ProjectsLayout {...proj.data}>
+<ProjectsLayout {...entry.data}>
   <Prose>
     <Content />
   </Prose>
